@@ -1177,7 +1177,7 @@ function batteryupdate(){
             }
         }
         else{
-            document.querySelector(".batrem_det").innerHTML=`${batsts}(${battery.level*100}%&nbsp;Available)`;
+            document.querySelector(".batrem_det").innerHTML=`${batsts}(${Math.floor(battery.level*100)}%&nbsp;Available)`;
             if(bathrs!=Infinity){
                 batsts="Discharging";
                 bathrs = Math.floor(battery.dischargingTime / 60/60);
@@ -1192,7 +1192,7 @@ function batteryupdate(){
                 document.querySelector(".batrem_det").innerHTML=`${batsts}:&nbsp;${bathrs}&nbsp;Hour(s)&nbsp;${batmins}&nbsp;Minute(s)&nbsp;Remaining`;
             }
             else{
-                document.querySelector(".batrem_det").innerHTML=`${batsts}(${battery.level*100}%&nbsp;Available)`;
+                document.querySelector(".batrem_det").innerHTML=`${batsts}(${Math.floor(battery.level*100)}%&nbsp;Available)`;
             }
         }
         else{
@@ -1202,7 +1202,7 @@ function batteryupdate(){
                 document.querySelector(".batrem_det").innerHTML=`${batsts}:&nbsp;${bathrs}&nbsp;Hour(s)&nbsp;${batmins}&nbsp;Minute(s)&nbsp;Remaining`;
             }
             else{
-                document.querySelector(".batrem_det").innerHTML=`${batsts}(${battery.level*100}%&nbsp;Available)`;
+                document.querySelector(".batrem_det").innerHTML=`${batsts}(${Math.floor(battery.level*100)}%&nbsp;Available)`;
             }
         }
         if(battery.charging){
